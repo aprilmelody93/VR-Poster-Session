@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 16.635855
     speed: 2
-    m_Value: 15.919477
+    m_Value: 16.635855
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -829,9 +829,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 16efffff
-      m_LastClickedID: -4330
-      m_ExpandedIDs: 36fbffffca490000b64d0000ac4f0000
+      m_SelectedIDs: 76f4ffff
+      m_LastClickedID: -2954
+      m_ExpandedIDs: 36fbffffca490000404a0000da4c0000ac4f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
