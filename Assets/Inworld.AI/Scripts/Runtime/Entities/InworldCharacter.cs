@@ -31,6 +31,7 @@ namespace Inworld
         [SerializeField] float m_SightRefreshRate = 0.25f;
         [Header("Log")]
         [SerializeField] bool m_logUtterances;
+        [SerializeField] private GameObject containerGameObject;
         public UnityEvent OnBeginSpeaking;
         public UnityEvent OnFinishedSpeaking;
         public UnityEvent<string, string> OnCharacterSpeaks;
@@ -159,6 +160,7 @@ namespace Inworld
         #region Monobehavior Functions
         void Awake()
         {
+            containerGameObject.SetActive(false);
             if (!m_Interaction || !m_Interaction.enabled)
             {
                 m_Interaction = gameObject.AddComponent<Interactions>();
@@ -225,10 +227,17 @@ namespace Inworld
         }
         #endregion
 
+       
+
+
         #region Private Functions
         IEnumerator CheckPriority()
         {
             // YAN: Update refreshed too fast. Use Coroutine for better performance.
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                DisplayPressToTalkText(false);
+            }
             while (true)
             {
                 if (InworldController.Instance && InworldController.Player)
@@ -237,17 +246,23 @@ namespace Inworld
                     Transform trPlayer = InworldController.Player.transform;
                     Priority = Vector3.Distance(trCharacter.position, trPlayer.position);
                     if (Priority > m_SightDistance)
+                    {
                         Priority = -1f;
+                        DisplayPressToTalkText(false);
+                    }
                     else
                     {
+                        
                         Vector3 vecDirection = (trPlayer.position - trCharacter.position).normalized;
                         float fAngle = Vector3.Angle(vecDirection, trCharacter.forward);
                         if (fAngle > m_SightAngle * 0.5f)
                         {
+                            DisplayPressToTalkText(false);
                             Priority = -1f;
                         }
                         else
                         {
+                            DisplayPressToTalkText(true);
                             Vector3 vecPlayerDirection = -vecDirection;
                             Priority = Vector3.Angle(vecPlayerDirection, trPlayer.forward);
                         }
@@ -255,6 +270,11 @@ namespace Inworld
                 }
                 yield return new WaitForSeconds(m_SightRefreshRate);
             }
+        }
+
+        void DisplayPressToTalkText(bool display)
+        {
+            containerGameObject.SetActive(display);
         }
         #endregion
 

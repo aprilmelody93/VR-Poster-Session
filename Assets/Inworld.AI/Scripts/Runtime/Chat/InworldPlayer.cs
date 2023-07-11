@@ -22,6 +22,7 @@ namespace Inworld.Sample
         [SerializeField] RuntimeCanvas m_RTCanvas;
         [SerializeField] Vector3 m_InitPosition;
         [SerializeField] Vector3 m_InitRotation;
+        [SerializeField] private GameObject containerGameObject;
         #endregion
 
         #region Public Function
@@ -46,8 +47,10 @@ namespace Inworld.Sample
         }
         void Update()
         {
-            if (Input.GetKeyUp(KeyCode.BackQuote))
+
+            if (Input.GetKeyUp(KeyCode.X))
             {
+                containerGameObject.SetActive(false);
                 m_GlobalChatCanvas.SetActive(!m_GlobalChatCanvas.activeSelf);
                 if (m_CameraController)
                     m_CameraController.enabled = !m_GlobalChatCanvas.activeSelf;

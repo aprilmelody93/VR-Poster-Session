@@ -12,6 +12,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 using EmotionEvent = Inworld.Grpc.EmotionEvent;
+using TMPro;
 namespace Inworld.Model
 {
     /// <summary>
@@ -29,6 +30,9 @@ namespace Inworld.Model
     /// </summary>
     public class HeadAnimation : MonoBehaviour, InworldAnimation, IEyeHeadAnimLoader
     {
+        
+        
+
         #region Callbacks
         void OnCharacterChanged(InworldCharacter oldChar, InworldCharacter newChar)
         {
@@ -57,6 +61,8 @@ namespace Inworld.Model
         float m_LookAtWeight;
         #endregion
 
+        
+
         #region Properties
         /// <summary>
         ///     Get/Set the attached Animator.
@@ -72,6 +78,7 @@ namespace Inworld.Model
         void Awake()
         {
             enabled = Init();
+            
         }
         void OnEnable()
         {
@@ -101,20 +108,30 @@ namespace Inworld.Model
         }
         #endregion
 
+
+    
         #region Private Functions
         void _StartLookAt(Vector3 lookPos)
         {
             m_LookAtWeight = Mathf.Clamp(m_LookAtWeight + 0.01f, 0, 1);
             Animator.SetLookAtWeight(m_LookAtWeight);
             Animator.SetLookAtPosition(lookPos);
+
+   
         }
         void _StopLookAt()
         {
+           
             m_Transform.localPosition = m_vecInitPosition;
             m_Transform.localEulerAngles = m_vecInitEuler;
             m_LookAtWeight = Mathf.Clamp(m_LookAtWeight - 0.01f, 0, 1);
             Animator.SetLookAtWeight(m_LookAtWeight);
+            
+
+
+
         }
+
         #endregion
 
         #region Interface Implementation
