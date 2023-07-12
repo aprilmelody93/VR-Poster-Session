@@ -262,9 +262,20 @@ namespace Inworld
                         }
                         else
                         {
-                            DisplayPressToTalkText(true);
+                            //DisplayPressToTalkText(true);
                             Vector3 vecPlayerDirection = -vecDirection;
                             Priority = Vector3.Angle(vecPlayerDirection, trPlayer.forward);
+                        }
+                        if (fAngle < m_SightAngle * 0.5f)
+                        {
+                            
+                            DisplayPressToTalkText(true);
+                            break; 
+                        }
+                        else
+                        {
+                            DisplayPressToTalkText(false);
+                            //break;
                         }
                     }
                 }

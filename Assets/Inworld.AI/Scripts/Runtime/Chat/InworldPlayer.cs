@@ -50,7 +50,15 @@ namespace Inworld.Sample
 
             if (Input.GetKeyUp(KeyCode.X))
             {
-                containerGameObject.SetActive(false);
+                if (containerGameObject.activeSelf == true)
+                {
+                    containerGameObject.SetActive(false);
+                }
+                else
+                {
+                    containerGameObject.SetActive(true);
+                }
+                    
                 m_GlobalChatCanvas.SetActive(!m_GlobalChatCanvas.activeSelf);
                 if (m_CameraController)
                     m_CameraController.enabled = !m_GlobalChatCanvas.activeSelf;
