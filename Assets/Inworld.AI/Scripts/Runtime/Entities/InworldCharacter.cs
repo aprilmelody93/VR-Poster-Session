@@ -8,6 +8,7 @@ using Inworld.Packets;
 using Inworld.Util;
 using System.Collections;
 using System.Collections.Generic;
+using Inworld.Sample;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -15,6 +16,7 @@ namespace Inworld
 {
     public class InworldCharacter : MonoBehaviour
     {
+        private InworldPlayer inworldPlayer;
         #region Inspector Variables
         [Header("Data:")]
         [SerializeField] InworldCharacterData m_Data;
@@ -168,6 +170,8 @@ namespace Inworld
             }
             if (!InworldController.Characters.Contains(this))
                 InworldController.Characters.Add(this);
+
+            inworldPlayer = GameObject.FindObjectOfType<InworldPlayer>();
         }
         void OnEnable()
         {
@@ -233,14 +237,18 @@ namespace Inworld
         #region Private Functions
         IEnumerator CheckPriority()
         {
+
             // YAN: Update refreshed too fast. Use Coroutine for better performance.
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                DisplayPressToTalkText(false);
-            }
+
             while (true)
             {
-                if (InworldController.Instance && InworldController.Player)
+                //if (Input.GetKeyUp(KeyCode.X))
+                //{
+                    //InworldPlayer.isUIToggledOff = !InworldPlayer.isUIToggledOff;
+                    
+                //}
+                DisplayPressToTalkText(!InworldPlayer.isUIToggledOff);
+                if (InworldController.Instance && InworldController.Player && !InworldPlayer.isUIToggledOff)
                 {
                     Transform trCharacter = transform;
                     Transform trPlayer = InworldController.Player.transform;
@@ -252,7 +260,7 @@ namespace Inworld
                     }
                     else
                     {
-                        
+
                         Vector3 vecDirection = (trPlayer.position - trCharacter.position).normalized;
                         float fAngle = Vector3.Angle(vecDirection, trCharacter.forward);
                         if (fAngle > m_SightAngle * 0.5f)
@@ -265,18 +273,13 @@ namespace Inworld
                             //DisplayPressToTalkText(true);
                             Vector3 vecPlayerDirection = -vecDirection;
                             Priority = Vector3.Angle(vecPlayerDirection, trPlayer.forward);
+                            if (Priority != -1f)
+                            {
+                                DisplayPressToTalkText(true);
+                            }
                         }
-                        if (fAngle < m_SightAngle * 0.5f)
-                        {
-                            
-                            DisplayPressToTalkText(true);
-                            break; 
-                        }
-                        else
-                        {
-                            DisplayPressToTalkText(false);
-                            //break;
-                        }
+
+
                     }
                 }
                 yield return new WaitForSeconds(m_SightRefreshRate);
