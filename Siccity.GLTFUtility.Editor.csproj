@@ -57,9 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Editor\ShaderSettingsDrawer.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Editor\GLTFImporter.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Editor\GLBImporter.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Editor\GLTFAssetUtility.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Editor\GLTFImporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Editor\GLTFUtility.Editor.asmdef" />
@@ -332,6 +332,24 @@
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Grpc.Core.Api">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="NewtonsoftJson">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\NewtonSoftJson\NewtonsoftJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -341,44 +359,26 @@
     <Reference Include="Google.Api.CommonProtos">
       <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Api.CommonProtos.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core">
       <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Grpc.Core.Api">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.Api.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Assets\Inworld.AI\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="InworldProto">
       <HintPath>Assets\Inworld.AI\Plugins\InworldProto.dll</HintPath>
-    </Reference>
-    <Reference Include="NewtonsoftJson">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\NewtonSoftJson\NewtonsoftJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

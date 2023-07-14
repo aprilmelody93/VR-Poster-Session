@@ -57,28 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\CharacterChooserPanel.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\TransformCanvas.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\Settings\InworldAI.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\IAvatarLoader.cs" />
-    <Compile Include="Assets\Inworld.AI\Editor\InworldEditor.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\DemoCanvas.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\SwitchButton.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Studio\IStudioDataHandler.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\EmotionCanvas.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Chat\RecordButton.cs" />
     <Compile Include="Assets\Inworld.AI\Editor\States\EditorPlaying.cs" />
-    <Compile Include="Assets\Inworld.AI\Editor\InworldEditorStudio.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\Settings\InworldUISettings.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\RuntimeCanvas.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\InworldServerConfig.cs" />
-    <Compile Include="Assets\Inworld.AI\Editor\InworldEditorUI.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Entities\InworldCharacter.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\LoginPanel.cs" />
     <Compile Include="Assets\Inworld.AI\Editor\States\EditorCharacterChooser.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\DynamicCharCanvas.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\ResetNeutral.cs" />
     <Compile Include="Assets\Inworld.AI\Editor\States\EditorInit.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Chat\ChatBubble.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\Settings\InworldSettings.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\Settings\InworldLog.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\InworldSceneData.cs" />
@@ -87,55 +74,68 @@
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\InworldKeywordListener.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\2DInteraction\MovableObject.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\MLAnimationData.cs" />
-    <Compile Include="Assets\Inworld.AI\Editor\States\EditorState.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\SessionCanvas.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\IEyeHeadAnimLoader.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Chat\InworldPlayer2D.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\LoadingPanel.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\2DInteraction\MapGrid.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\InworldCameraController.cs" />
     <Compile Include="Assets\Inworld.AI\Editor\InworldEditorUtil.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\InworldCharacterData.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\ForceInitialize.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\InitInworld.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\HistoryItem.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\GLTFAvatarLoader.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\FacialAnimationData.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\InworldLipAnimation.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\InworldWorkspaceData.cs" />
-    <Compile Include="Assets\Inworld.AI\Editor\States\EditorDefault.cs" />
     <Compile Include="Assets\Inworld.AI\Editor\States\EditorError.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Entities\InworldController.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Chat\ChatPanel3D.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Studio\RuntimeInworldStudio.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\MultiCharCanvas.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Studio\InworldStudio.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\TokenCanvas.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\NavigationAIScript.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\AudioInteraction.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\BodyAnimation.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Audio\AudioCapture.cs" />
-    <Compile Include="Assets\Inworld.AI\Editor\VSAttribution.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\Settings\InworldUserSettings.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\2DInteraction\Stone.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\InworldPlayerProfile.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\SingletonBehavior.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\CharacterChooser.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Entities\InworldClient.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\InworldFileDownloader.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\2DInteraction\CharacterController2D.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\HeadAnimation.cs" />
+    <Compile Include="Assets\Inworld.AI\Editor\States\EditorSceneChooser.cs" />
+    <Compile Include="Assets\Inworld.AI\Editor\States\EditorWorkspaceChooser.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\TransformCanvas.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\IAvatarLoader.cs" />
+    <Compile Include="Assets\Inworld.AI\Editor\InworldEditor.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\DemoCanvas.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Studio\IStudioDataHandler.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\EmotionCanvas.cs" />
+    <Compile Include="Assets\Inworld.AI\Editor\InworldEditorStudio.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\RuntimeCanvas.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\InworldServerConfig.cs" />
+    <Compile Include="Assets\Inworld.AI\Editor\InworldEditorUI.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Entities\InworldCharacter.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\ResetNeutral.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Chat\ChatBubble.cs" />
+    <Compile Include="Assets\Inworld.AI\Editor\States\EditorState.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\IEyeHeadAnimLoader.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\LoadingPanel.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\InworldCameraController.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\GLTFAvatarLoader.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\InworldLipAnimation.cs" />
+    <Compile Include="Assets\Inworld.AI\Editor\States\EditorDefault.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Studio\InworldStudio.cs" />
+    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Sample\TokenCanvas.cs" />
+    <Compile Include="Assets\Inworld.AI\Editor\VSAttribution.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Studio\StudioDataClasses.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\ILipAnimations.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\Interactions.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\InworldPlayerProfile.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\SingletonBehavior.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Chat\InworldPlayer.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\UI\CharacterChooser.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\Settings\InworldGameSettings.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Entities\InworldClient.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\InworldFileDownloader.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\InworldAnimation.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Model\DummyAvatarLoader.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Data\InworldKeySecret.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\2DInteraction\CharacterController2D.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\Runtime\3DInteraction\HeadAnimation.cs" />
     <Compile Include="Assets\Inworld.AI\Scripts\Runtime\Util\InworldEnums.cs" />
-    <Compile Include="Assets\Inworld.AI\Editor\States\EditorSceneChooser.cs" />
-    <Compile Include="Assets\Inworld.AI\Editor\States\EditorWorkspaceChooser.cs" />
-    <Compile Include="Assets\Inworld.AI\Scripts\NavigationAIScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Inworld.AI\Plugins\System.Runtime.CompilerServices.Unsafe.dll" />
@@ -433,6 +433,24 @@
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Grpc.Core.Api">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="NewtonsoftJson">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\NewtonSoftJson\NewtonsoftJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -442,44 +460,26 @@
     <Reference Include="Google.Api.CommonProtos">
       <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Api.CommonProtos.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core">
       <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Grpc.Core.Api">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.Api.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Assets\Inworld.AI\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="InworldProto">
       <HintPath>Assets\Inworld.AI\Plugins\InworldProto.dll</HintPath>
-    </Reference>
-    <Reference Include="NewtonsoftJson">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\NewtonSoftJson\NewtonsoftJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

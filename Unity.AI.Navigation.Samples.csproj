@@ -56,23 +56,23 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\RandomInstancing.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\ClickToMove.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\FreeCam.cs" />
     <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\AgentLinkMover.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\NavigationLoop.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\ClickToMove.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\DynamicNavMeshObject.cs" />
     <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\RandomWalk.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\SpawnPrefabOnKeyDown.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\DungeonManager.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\MeshTool.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\EnableIffSleeping.cs" />
     <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\Oscillator.cs" />
     <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\NavMeshSurfaceVolumeUpdater.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\DestroyOnTrigger.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\NavigationLoop.cs" />
-    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\DynamicNavMeshObject.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\EnableIffSleeping.cs" />
     <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\GloballyUpdatedNavMeshSurface.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\RandomInstancing.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\DungeonManager.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\FreeCam.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\MeshTool.cs" />
     <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\ProjectSettingsUtilities\NavigationSampleInitializer.cs" />
     <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\Despawner.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\SpawnPrefabOnKeyDown.cs" />
+    <Compile Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Scripts\DestroyOnTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Samples\AI Navigation\1.1.4\Build And Connect NavMesh Surfaces\Unity.AI.Navigation.Samples.asmdef" />
@@ -342,6 +342,24 @@
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Grpc.Core.Api">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="NewtonsoftJson">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\NewtonSoftJson\NewtonsoftJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -351,44 +369,26 @@
     <Reference Include="Google.Api.CommonProtos">
       <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Api.CommonProtos.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core">
       <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Grpc.Core.Api">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.Api.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Assets\Inworld.AI\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="InworldProto">
       <HintPath>Assets\Inworld.AI\Plugins\InworldProto.dll</HintPath>
-    </Reference>
-    <Reference Include="NewtonsoftJson">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\NewtonSoftJson\NewtonsoftJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

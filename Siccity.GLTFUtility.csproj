@@ -58,36 +58,36 @@
   <ItemGroup>
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFExtras.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\Vector3Converter.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Settings\AnimationSettings.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFCamera.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\ColorConverter.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFSkin.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFBufferView.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Extensions.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\Vector2Converter.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFTexture.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFMaterial.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFProperty.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFAnimation.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\EnumConverter.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFObject.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFAccessor.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Exporter.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Importer.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFImage.cs" />
+    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Settings\AnimationSettings.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\QuaternionConverter.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Enums.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFAsset.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Settings\ShaderSettings.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Extensions\KHR_texture_transform.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFSkin.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFBufferView.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Extensions.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFBuffer.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\Vector2Converter.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\BufferedBinaryReader.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFTexture.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFMaterial.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFNode.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFScene.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFProperty.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFAnimation.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFMesh.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\EnumConverter.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFObject.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Settings\ImportSettings.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\Matrix4x4Converter.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFAccessor.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Exporter.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Importer.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFPrimitive.cs" />
-    <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Spec\GLTFImage.cs" />
     <Compile Include="Assets\Inworld.AI\Plugins\ThirdParty\GLTFUtility\Scripts\Converters\TranslationConverter.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -362,6 +362,24 @@
     <Reference Include="UnityEditor.UWP.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\MetroSupport\UnityEditor.UWP.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Grpc.Core.Api">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="NewtonsoftJson">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\NewtonSoftJson\NewtonsoftJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -371,44 +389,26 @@
     <Reference Include="Google.Api.CommonProtos">
       <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Api.CommonProtos.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core">
       <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Grpc.Core.Api">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Grpc.Core.Api.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Assets\Inworld.AI\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.5\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="InworldProto">
       <HintPath>Assets\Inworld.AI\Plugins\InworldProto.dll</HintPath>
-    </Reference>
-    <Reference Include="NewtonsoftJson">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\NewtonSoftJson\NewtonsoftJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>Assets\Inworld.AI\Plugins\ThirdParty\GRPC\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="ReportGeneratorMerged">
-      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
