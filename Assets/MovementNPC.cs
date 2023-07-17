@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class MovementNPC : MonoBehaviour
 {
-    public Animator animator;
+  public Animator animator;
+ 
 
     void Start()
     {
@@ -19,25 +20,13 @@ public class MovementNPC : MonoBehaviour
         // Set the "IsWalking" parameter to true
         animator.SetBool("IsWalking", true);
 
-        // Schedule the character to stand after 5 seconds
-       // Invoke("StandAfterWalking", 5f);
+        // Start the coroutine to stop walking after the specified duration
+      
     }
 
-   // void StandAfterWalking()
-  //  {
-        // Set the "IsWalking" parameter to false
-       // animator.SetBool("IsWalking", false);
-
-        // Schedule the character to nod after 2 seconds
-        //Invoke("Nod", 2f);
-   // }
-
-   // void Nod()
-   // {
-        // Trigger the "IsNodding" parameter
-     //   animator.SetTrigger("IsNodding");
-   // }
-
+    
+   
+   
 
 }
 

@@ -18,13 +18,11 @@ namespace Inworld.Sample
         #region Inspector Variables
         [SerializeField] protected GameObject m_GlobalChatCanvas;
         [SerializeField] RectTransform m_ContentRT;
-        [SerializeField] ChatBubble m_BubbleLeft;
-        [SerializeField] ChatBubble m_BubbleRight;
         [SerializeField] TMP_InputField m_InputField;
+        [SerializeField] GameObject m_TextDisplay;
         #endregion
 
         #region Private Variables
-        readonly Dictionary<string, ChatBubble> m_Bubbles = new Dictionary<string, ChatBubble>();
         readonly Dictionary<string, InworldCharacter> m_Characters = new Dictionary<string, InworldCharacter>();
         #endregion
 
@@ -44,8 +42,8 @@ namespace Inworld.Sample
             InworldController.Instance.CurrentCharacter.SendText(m_InputField.text);
             m_InputField.text = null;
         }
-        public void RegisterCharacter(InworldCharacter character) => character.InteractionEvent.AddListener(OnInteractionStatus);
-        
+
+        public void RegisterCharacter(InworldCharacter character) => character.InteractionEvent.RemoveListener(OnInteractionStatus);
         #endregion
 
         #region Monobehavior Functions
@@ -53,6 +51,7 @@ namespace Inworld.Sample
         {
             InworldController.Instance.OnStateChanged += OnControllerStatusChanged;
         }
+
         void Update()
         {
             UpdateSendText();
@@ -64,19 +63,20 @@ namespace Inworld.Sample
         {
             if (states != ControllerStates.Connected)
                 return;
-            _ClearHistoryLog();
+            ClearHistoryLog();
             foreach (InworldCharacter iwChar in InworldController.Characters)
             {
                 m_Characters[iwChar.ID] = iwChar;
-                iwChar.InteractionEvent.AddListener(OnInteractionStatus);
+                
             }
         }
+
         void OnInteractionStatus(InteractionStatus status, List<HistoryItem> historyItems)
         {
             if (status != InteractionStatus.HistoryChanged)
                 return;
-            if (m_ContentRT)
-                _RefreshBubbles(historyItems);
+            if (m_TextDisplay)
+                RefreshText(historyItems);
         }
         #endregion
 
@@ -89,47 +89,51 @@ namespace Inworld.Sample
                 return;
             SendText();
         }
-        void _RefreshBubbles(List<HistoryItem> historyItems)
+
+        void RefreshText(List<HistoryItem> historyItems)
         {
+            string displayText = "";
             foreach (HistoryItem item in historyItems)
             {
-                if (!m_Bubbles.ContainsKey(item.UtteranceId))
+                if (item.Event is TextEvent textEvent)
                 {
+                    string characterName = "";
                     if (item.Event.Routing.Source.IsPlayer())
                     {
-                        m_Bubbles[item.UtteranceId] = Instantiate(m_BubbleLeft, m_ContentRT);
-                        m_Bubbles[item.UtteranceId].SetBubble(InworldAI.User.Name, InworldAI.Settings.DefaultThumbnail);
+                        characterName = "<b>You:</b> ";
                     }
                     else if (item.Event.Routing.Source.IsAgent())
                     {
-                        m_Bubbles[item.UtteranceId] = Instantiate(m_BubbleRight, m_ContentRT);
                         if (m_Characters.ContainsKey(item.Event.Routing.Source.Id))
                         {
                             InworldCharacter source = m_Characters[item.Event.Routing.Source.Id];
-                            m_Bubbles[item.UtteranceId].SetBubble(source.CharacterName, source.Data.Thumbnail);
+                            characterName = $"<b>{source.CharacterName}:</b> ";
                         }
                     }
+
+                    displayText += $"<align=left>{characterName}{textEvent.Text}</align>\n";
                 }
-                if (item.Event is TextEvent textEvent)
-                    m_Bubbles[item.UtteranceId].Text = textEvent.Text;
                 if (item.Event is ActionEvent actionEvent)
-                    m_Bubbles[item.UtteranceId].Text = $"<i>{actionEvent.Content}</i>";
-                _SetContentHeight();
+                    displayText += "<align=left><i>" + actionEvent.Content + "</i></align>\n";
             }
-        }
-        void _ClearHistoryLog()
-        {
-            foreach (KeyValuePair<string, ChatBubble> kvp in m_Bubbles)
+
+            if (m_TextDisplay != null)
             {
-                Destroy(kvp.Value.gameObject, 0.25f);
+                TextMeshProUGUI textMeshPro = m_TextDisplay.GetComponent<TextMeshProUGUI>();
+                if (textMeshPro != null)
+                    textMeshPro.text = displayText;
             }
-            m_Bubbles.Clear();
-            m_Characters.Clear();
         }
-        void _SetContentHeight()
+
+        void ClearHistoryLog()
         {
-            float fHeight = m_Bubbles.Values.Sum(bubble => bubble.Height);
-            m_ContentRT.sizeDelta = new Vector2(m_ContentRT.sizeDelta.x, fHeight);
+            if (m_TextDisplay != null)
+            {
+                TextMeshProUGUI textMeshPro = m_TextDisplay.GetComponent<TextMeshProUGUI>();
+                if (textMeshPro != null)
+                    textMeshPro.text = "";
+            }
+            m_Characters.Clear();
         }
         #endregion
     }

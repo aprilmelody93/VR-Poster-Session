@@ -22,6 +22,8 @@ namespace Inworld.Sample
         [SerializeField] RuntimeCanvas m_RTCanvas;
         [SerializeField] Vector3 m_InitPosition;
         [SerializeField] Vector3 m_InitRotation;
+        [SerializeField] private GameObject canvasObject;
+
         #endregion
 
         #region Public Function
@@ -30,6 +32,8 @@ namespace Inworld.Sample
             if (!m_RTCanvas)
                 return;
             m_GlobalChatCanvas.gameObject.SetActive(false);
+            m_GlobalChatCanvas.gameObject.SetActive(false);
+            canvasObject.SetActive(false);
             m_CameraController.enabled = true;
             m_RTCanvas.gameObject.SetActive(true);
             m_RTCanvas.BackToLobby();
@@ -49,10 +53,13 @@ namespace Inworld.Sample
             if (Input.GetKeyUp(KeyCode.BackQuote))
             {
                 m_GlobalChatCanvas.SetActive(!m_GlobalChatCanvas.activeSelf);
+                canvasObject.SetActive(true);
                 if (m_CameraController)
                     m_CameraController.enabled = !m_GlobalChatCanvas.activeSelf;
+                    canvasObject.SetActive(true);
                 if (m_TriggerCanvas)
                     m_TriggerCanvas.SetActive(!m_TriggerCanvas.activeSelf);
+                    canvasObject.SetActive(true);
             }
             UpdateSendText();
         }
